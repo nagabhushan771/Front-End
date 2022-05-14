@@ -1,0 +1,29 @@
+h1{
+    color: brown;
+    font-size: 50px;
+}
+p{
+    color: rgb(50, 71, 130);
+    font-size: 20px;
+    font-style: Fantasy;
+}
+body{
+    background-color: rgb(211, 215, 121);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+span{
+    font-weight: 700;
+    font-style: italic;
+    
+}
+.heading1{
+    text-align: center;
+}
+.heading2{
+    color: crimson;
+}
+h1:hover{
+    font-size: 70px;
+    border: 30px groove rgb(50, 71, 130);
+    font-family: fantasy;
+}

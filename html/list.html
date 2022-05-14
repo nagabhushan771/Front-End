@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+<body>
+    <!-- &nbsp to give spaces between the elements -->
+    <h2>Lists</h2>
+    <h3>Unordered Lists</h3>
+    <ul>
+        <li>First point</li>
+        <li>Second point</li>
+        <li>Third point</li>
+        <li>Forth Point
+            <ol>
+                <li>First point</li>
+                <li>Second point</li>
+                <li>Third point</li>
+            </ol>
+        </li>
+    </ul>
+    <h3>Ordered Lists</h3>
+    <ol>
+        <li>First point</li>
+        <li>Second point</li>
+        <li>Third point</li>
+        <li>Forth Point
+            <ul>
+                <li>First point</li>
+                <li>Second point</li>
+                <li>Third point</li>
+            </ul>
+        </li>
+    </ol>
+
+    <!-- tables -->
+    <table border="2">
+
+        <!-- colspan is used give the same heading for the multiple columns and put it in center
+             here it specifies the common heading for the 3 columns-->
+        <tr><th colspan="3">Main Heading</th></tr>
+        <tr>
+            <!-- th tags are used for the heading of the tables columns -->
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+        </tr>
+        <tr>
+            <!-- td tag is used for the data of the table -->
+            <td>data1</td>
+            <td>data2</td>
+            <td>data3</td>
+        </tr>
+        <tr>
+            <td>data1</td>
+            <td>data2</td>
+            <td>data3</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <!-- creating a table inside the table-->
+    <!-- if we want to create table inside table we need to create table inside the td tag only -->
+    <table border="10" bordercolor="red">
+        <tr>
+            <td>
+                <table border="10" bordercolor="green">
+                    <tr>
+                        <td>
+                            <table border="10" bordercolor="blue">
+                                <tr>
+                                    <td>
+                                        <table border="10" bordercolor="red">
+                                            <tr>
+                                                <td>
+                                                    <table border="10" bordercolor="green">
+                                                        <tr>
+                                                            <td>
+                                                                First row first col
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table border="10" bordercolor="green">
+                                                        <tr>
+                                                            <td>
+                                                                First row second col
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table border="10" bordercolor="green">
+                                                        <tr>
+                                                            <td>
+                                                               Second row
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table border="10" bordercolor="green">
+                                                        <tr>
+                                                            <td>
+                                                                Third row
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

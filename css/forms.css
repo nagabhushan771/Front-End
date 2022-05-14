@@ -1,7 +1,14 @@
-input[type=text], input[type=email], input[type=tel], select{
-    width: 80%;
-    padding: 12px 10px 7px 10px;
-    margin: 10px;
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+input[type=text], input[type=email], input[type=tel], input[type=submit], input[type=date], select{
+    width: 100%;
+    padding: 12px 0px 7px 10px;
+    margin: 10px 0;
     border-top: transparent;
     border-left: transparent;
     border-right: transparent;
@@ -12,6 +19,13 @@ input[type=text], input[type=email], input[type=tel], select{
 select{
     width: 10%;
 }
+/* .onFocus:focus{
+    outline: none;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid #41776e;
+} */
 input[type=text]:focus{
     outline: none;
     border-top: transparent;
@@ -42,22 +56,22 @@ select:focus{
 }
 div{
     width: 50%;
-    padding: 30px 90px;
+    padding: 30px 30px;
     background-color: #e5ffdb;
     margin: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 input[type=submit]{
-    width: 84%;
+    width: 100%;
     border: none;
     background-color: #41776e;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #e5ffdb;
-    padding: 10px;
+    padding: 10px;  
     border-radius: 10px;
     cursor: pointer;
-    margin: 5px;
+    margin: 10px 0px;
 }
 input[type=submit]:hover{
     background-color: #84ca85;
@@ -65,12 +79,85 @@ input[type=submit]:hover{
 }
 label{
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
     font-weight: 530;
 
 }
 h1{
     padding: 10px;
+}
+
+.radioButton{
+    width: 100%;
+    padding: 0;
+    
+}
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #164A41;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type=date]{
+    width: 30%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 10px;
+}
+
+input[type=date]:focus{
+    outline: none;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid #41776e;
+}
+
+input[type=file]{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    margin: 10px 0;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid #74b175;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type=file]:focus{
+    outline: none;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid #41776e;
+}
+
+.customUpload{
+    display: none;
 }
 
 

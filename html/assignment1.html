@@ -13,28 +13,28 @@
         <h1>Registration Form</h1>
         <form action="#">
             <label for="fname">First Name *</label>
-            <br>
-            <input type="text" id="fname" name="firstname" placeholder="Your First Name" required>
-            <br>
+            
+            <input type="text" id="fname" name="firstname" placeholder="Your First Name" class="OnFocus" required>
+            <br><br>
             <label for="lname">Last Name *</label>
-            <br>
-            <input type="text" id="lname" name="lastname" placeholder="Your Last Name" required>
-            <br>
+            
+            <input type="text" id="lname" name="lastname" placeholder="Your Last Name" class="OnFocus" required>
+            <br><br>
             <label for="cname">College Name</label>
-            <br>
-            <input type="text" id="cname" name="collegename" placeholder="Your College Name">
-            <br>
+            
+            <input type="text" id="cname" name="collegename" placeholder="Your College Name" class="OnFocus">
+            <br><br>
             <label for="email">Email *</label>
-            <br>
-            <input type="email" id="email" name="email" placeholder="Your Mail ID" required>
-            <br>
+            
+            <input type="email" id="email" name="email" placeholder="Your Mail ID" class="OnFocus" required>
+            <br><br>
             <label for="mobileno">Mobile number *</label>
+            
+            <input type="tel" id="mobileno" name="mobilenumber" placeholder="Your Mobile number" class="OnFocus" required>
+            <br><br>
+            <label for="batch">Batch *</label>
             <br>
-            <input type="tel" id="mobileno" name="mobilenumber" placeholder="Your Mobile number" required>
-            <br>
-            <label for="batch">Batch</label>
-            <br>
-            <select id="batch" name="batch">
+            <select id="batch" name="batch" class="OnFocus" required>
                 <option>B 1</option>
                 <option>B 2</option>
                 <option>B 3</option>
@@ -46,6 +46,33 @@
                 <option>B 9</option>
                 <option>B 10</option>
             </select>
+            <br>
+            <label for="graduation">Graduation *</label>
+            <br>
+            <input type="radio" id="2022" name="graduation" required>
+            <label class="radioButton" for="2022">2022</label>
+            <br>
+            <input type="radio" id="2021" name="graduation" required>
+            <label class="radioButton" for="2021">2021</label>
+            <br>
+            <input type="radio" id="2020" name="graduation" required>
+            <label class="radioButton" for="2020">2020</label>
+            <br>
+            <input type="radio" id="2019" name="graduation" required>
+            <label class="radioButton" for="2019">2019</label>
+            <br>
+            <input type="radio" id="below2019" name="graduation" required>
+            <label class="radioButton" for="below2019">2018 and below</label>
+            <br><br>
+            <label for="dob">Date of Birth</label>
+            <br>
+            <input type="date" id="dob" name="dateofbirth">
+            <br><br>
+            <label for="resume">Upload Your Resume *</label>
+            <!-- <label for="resume" class="customUpload">
+                <input type="file" id="resume" name="resume" required>
+            </label> -->
+            <input type="file" id="resume" name="resume" required>
             <br>
             <input type="submit">
         </form>

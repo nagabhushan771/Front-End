@@ -11,15 +11,11 @@ h1{
 }
 
 table{
-    border: none;
     width: 100%;
+    border-collapse: collapse;
 }
 
-tr{
-    border: none;
-    background-color: #9DC88D;
 
-}
 
 .d0{
     background-color: #baefa7;

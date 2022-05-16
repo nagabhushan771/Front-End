@@ -1,0 +1,66 @@
+body{
+    /* background-color: darkgray; */
+    background: url("https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/background.jpg");
+    
+}
+
+p{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: gray;
+    /* opacity: 0.9; */
+    /* background: url("https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project2/cssProject2/grid.png"); */
+    width: 960px;
+    /* height: 800px; */
+    /* margin: auto brings the container to the center of the body */
+    margin: auto;
+    padding-top: 7px;
+    text-align: center;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img{
+    margin: 7px;
+    border-radius: 10px;
+    opacity: 0.75;
+}
+
+img:hover{
+    /* Opacity isused for the transperancy */
+    opacity: 1;
+}
+
+/* .longbox{
+    width: 960px;
+    height: 100px;
+}
+
+.box{
+    background: gray;
+    opacity: 0.7;
+    float: left; float is used to bring the elements of the smaller size to the one row up to the number of elements the row can accomdate
+
+}
+
+.smallbox{
+    margin-top:20px;
+    margin-bottom:30px;
+    width:220px;
+    height:220px
+  }
+  .ml-10{
+    margin-left:10px;
+  }
+  .ml-20{
+    margin-left:20px;
+  } */
+  
+  

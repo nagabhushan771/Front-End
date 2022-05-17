@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <!-- fieldset os used to make parts in  the form -->
+            <fieldset>
+                <!-- legend id used to give name to the fieldset -->
+                <legend><span class="number">1</span> Candidate Info</legend>
+                <input type="text" name="Name" id="name" placeholder="Your Name *">
+                <input type="email" name="Mail" id="mail" placeholder="Your Email *">
+                <textarea placeholder="About Yourself *"></textarea>
+                <label for="job">Intrests :</label>
+                <select id="job">
+                    <!-- optgroup is used to divide the options into groups with the heading -->
+                    <optgroup label="Indoor">
+                        <option value="fishkeeping">Fishkeeping</option>
+                        <option value="reading">Reading</option>
+                        <option value="boxing">Boxing</option>
+                        <option value="debate">Debate</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="snooker">Snooker</option>
+                        <option value="other_indoor">Other</option>
+                    </optgroup>
+                    <optgroup label="Outdoor">
+                        <option value="football">Football</option>
+                        <option value="swimming">Swimming</option>
+                        <option value="fishing">Fishing</option>
+                        <option value="climbing">Climbing</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="other_outdoor">Other</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend><span class="number">2</span> Additional Info </legend>
+                <textarea placeholder="About Your school *"></textarea>
+            </fieldset>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

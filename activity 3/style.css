@@ -1,0 +1,33 @@
+body{
+    background-color: #cbd6cb;
+}
+
+.center{
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    padding: 15px;
+}
+
+.heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.plr-10{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.center-small{
+    text-align: left;
+}
+
+.ml-10{
+    margin-left: 20px;
+}
+
+/* .imageContainer{
+    
+} */
+

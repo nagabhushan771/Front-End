@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            /* inline grid -> grid length will be sum of number of colums length
+            grid -> grid length will be 100% of the container */
+            display: grid;
+            background-color: rgb(29, 177, 235);
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            gap: 10px;
+        }
+        .grid-items{
+            background-color: rgba(255, 255,255, 0.8);
+            border: 1px solid black;
+            font-size: 30px;
+            padding: 20px;
+            text-align: center;
+        }
+        .item1{
+            /* To increase the colspan of the grid item we need to define the starting point and the ening point */
+            /* Starts at the starting of the 1st col */
+            grid-column-start: 1;
+            /* ends at the starting of the 3rd col */
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Grid</h2>
+    <p>A Grid layout must have th parent element with a <em>display</em> property set to <em>grid</em> or <em>inline-grid</em></p>
+    <div class="grid-container">
+        <div class="grid-items item1">1</div>
+        <div class="grid-items">2</div>
+        <div class="grid-items">3</div>
+        <div class="grid-items">4</div>
+        <div class="grid-items">5</div>
+        <div class="grid-items">6</div>
+        <div class="grid-items">7</div>
+        <div class="grid-items">8</div>
+        <!-- <div class="grid-items">9</div> -->
+    </div>
+</body>
+</html>

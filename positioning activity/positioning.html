@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        div.relative{
+            /* position by default will be static
+            if we set to relative the new position will be relative to its previous static position */
+            position: relative;
+            height: 200px;
+            width: 400px;
+            /* display: inline; */
+            border: 3px solid red;
+        }
+
+        div.absolute{
+            position: absolute;
+            height: 100px;
+            width: 200px;
+            top: 80px;
+            right: 0px;
+            border: 3px solid red;
+        }
+
+        div.fixed{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 300px;
+            border: 3px solid green;
+        }
+
+        body{
+            height: 3000px;
+        }
+
+        div.sticky{
+            /* if we give sticky as the position it will move to the position that we have mentioned and stops their */
+            position: sticky;
+            top: 0;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positioning : Absolute</h1>
+    <p>The position of the block with absolute position will be relative to the nearest ancestor with relative property of no one is there it will be relative to body of the page</p>
+    <div class="relative">
+        <p>This is the relative block. </p>
+        <div class="absolute">
+            <p>This is the absolute block.</p>
+        </div>
+    </div>
+    <br>
+    <div class="fixed">
+        This is the fixed div it will stay at the given position irrspective of the contents in the screen
+    </div>
+    <div class="sticky"> This is the stickey positioned div</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio, voluptas recusandae nemo eveniet omnis. Esse, quam sequi ea qui ipsum, veritatis labore non laboriosam, ad itaque explicabo nobis iusto!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quo similique. Vel corrupti aperiam delectus necessitatibus maiores voluptate sit commodi quo quis modi, quasi, distinctio repellat sint quas eaque placeat!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores vel rem repudiandae, vitae, ratione tempora molestias iste beatae nisi tempore eius temporibus dicta amet non assumenda qui corporis numquam ipsam.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A animi quaerat natus eveniet eos nobis earum quidem, quis dolorum odit non harum reiciendis odio ducimus doloribus aliquam laborum nisi provident?</p>
+</body>
+</html>

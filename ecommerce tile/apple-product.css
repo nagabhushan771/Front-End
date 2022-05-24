@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgreen;
+    display: grid;
+    padding-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 2.5em 0;
+    min-width: 600px;
+}
+
+.productPhoto{
+    position: relative;
+}
+
+/* Code I have added */
+.varient ul, .photo-album ul{
+    display: flex;
+    list-style: none;
+    justify-items: flex-end;
+}
+
+.varient li{
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+    
+}
+
+.photo-album li{
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+/* .varient li:hover{
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+} */

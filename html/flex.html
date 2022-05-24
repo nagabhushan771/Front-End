@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: rgb(80, 80, 244);
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-flow : flex-direction flex-wrap */
+            flex-flow: row wrap;
+            /* align-items: flex-start; */
+        }
+
+        .flex-container > div{
+            font-size: 30px;
+            margin: 30px;
+            padding: 20px;
+            background-color: rgb(207, 231, 252);
+            width: 100px;
+            /* line-height: 75px; */
+            text-align: center;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div style="align-self: center;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <br>
+    <div class="flex-container">
+        <!-- know what the changes are done due to flex-grow, shirink, basis properties and also order to order the items -->
+        <div style="flex-shrink: 1; align-self: end;">1</div>
+        <div style="flex-grow: 1;">2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+        
+    </div>
+</body>
+</html>

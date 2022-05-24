@@ -27,8 +27,131 @@ img{
     position: relative;
 }
 
+.photo-container{
+    position: absolute;
+    left: -3em;
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-main{
+    border-radius: 5px 5px 0 0;
+    background-color: greenyellow;
+    background: radial-gradient(white 30%, greenyellow 70%);
+}
+
+.photo-main .controls{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.photo-main .controls i{
+    cursor: pointer;
+}
+
+.photo-main img{
+    position: absolute;
+    left: -4em;
+    top: 2em;
+    filter: saturate(120%) contrast(120%) hue-rotate(10deg) drop-shadow(1px 20px 10px rgba(0,0,0,0.3));
+
+}
+
+.photo-album{
+    border-radius: 0 0 5px 5px;
+    padding: 1em;
+    background-color: white;
+}
+
+.photo-album ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.photo-album li{
+    border: 0.1px solid lightgray;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-right: 4px;
+    border-radius: 3px;
+    float: left;
+}
+
+.title h1{
+    font-size: 1.5em;
+    color: darkslategray;
+}
+
+.title span{
+    font-size: 0.7em;
+    color: lightgray;
+}
+
+.price{
+    margin: 1.5em 0;
+    color: red;
+    font-size: 1.5em;
+}
+
+.price span{
+    font-size: 3em;
+    padding-left: 0.2em;
+}
+
+.varient li{
+    list-style: none;
+    float: left;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding: 3px;
+    margin-left: 4px;
+}
+
+.varient li:first-child,.varient li:hover{
+    border: 1px solid darkslategrey;
+    border-radius: 3px;
+}
+
+.description{
+    clear: left;
+    margin: 2em 0;
+}
+
+.description ul{
+    font-size: 0.8em;
+}
+
+.buy--button{
+    color: white;
+    background-color: indianred;
+    letter-spacing: 1.5px;
+    padding: 1.5em 3em;
+    border: none;
+    border-radius: 7.5px;
+    font-size: 1em;
+    font-weight: 700;
+    box-shadow: 2px 2px 25px -5px gray;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.buy--button:active{
+    transform: scale(0.90);
+}
+
 /* Code I have added */
-.varient ul, .photo-album ul{
+/* .varient ul, .photo-album ul{
     display: flex;
     list-style: none;
     justify-items: flex-end;
@@ -47,7 +170,7 @@ img{
     border-radius: 5px;
 }
 
-/* .varient li:hover{
+.varient li:hover{
     border: 2px solid black;
     cursor: pointer;
     border-radius: 5px;

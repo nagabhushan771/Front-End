@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Pacifico|Righteous|Roboto+Condensed|Ubuntu');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato';
+    overflow-x: hidden;
+}
+
+nav.navbar-position{
+    position: sticky;
+    top: 0;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico';
+    font-size: 35px;
+    color: lightcoral;
+}
+
+.nav-links{
+    font-family: 'Roboto Condensed';
+    margin: 15px;
+    font-size: 16px;
+    color: black;
+}
+
+.menu-right-btn{
+    background-color: white;
+    padding: 13px 46px;
+    transition: 0.5s ease-out;
+}
+
+.menu-right-btn:hover{
+    background-color: cyan;
+    color: white;
+}
+
+.site-content{
+    background-image: url("./image2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.site-title,.site-desc{
+    font-family: 'Righteous';
+    color: white;
+}
+
+.site-title{
+    margin-top: 30%;
+    margin-bottom: 6%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.site-desc{
+    text-align: center;
+    font-size: 16px;
+}
+
+.site-btn1{
+    margin-bottom: 30%;
+    margin-top: 6%;
+    margin-left: 20%;
+    background-color: black;
+    color: white;
+}
+
+.site-btn2{
+    margin-bottom: 30%;
+    margin-top: 6%;
+    background-color: bisque;
+}
+
+.section1 .para-1{
+    margin-top: 2%;
+    width:80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 4%;
+
+}
+
+.section1 .card-text, .para-1{
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.section1{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.section1 .card{
+    width: 20rem;
+}
+
+.section2 .container-fluid{
+    background-image: url(./image3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section2 .heading1{
+    margin-top: 15%;
+    margin-bottom: 4%;
+    font-family: 'Righteous';
+    width: 80%;
+    margin-left: 10%;
+    color: whitesmoke;
+}
+
+.section2 .para-1{
+    font-family: 'Ubuntu';
+    color: whitesmoke;
+    width: 80%;
+    margin-bottom: 6%;
+    font-size: 18px;
+    margin-left: 10%;
+}
+
+.section2 .btn1{
+    width: 15%;
+    margin-bottom: 10%;
+    padding: 10px;
+    margin-left: 42%;
+}
+
+.section3{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.section3 .fas{
+    color: lightseagreen;
+}
+
+.section3 h3{
+    font-family: 'Ubuntu';
+
+}
+
+.section3 p{
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.section4{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.section4 h1{
+    /* margin-top: 10%; */
+    font-family: 'Ubuntu';
+    margin-bottom: 3%;
+}
+
+.section4 img{
+    width: 590px;
+}
+
+.section4 .anchor-btn{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.section4 .anchor-btn:hover, .anchor-btn:active{
+    background-color: rgb(97, 219, 97);
+}
+
+.section4 .para-1{
+    font-family: 'Roboto Condensed';
+    color: white;
+    /* font-weight: 100; */
+    margin-top: 8%;
+    font-size: 22px;
+}
+
+.section5 .form{
+    display: inline;
+    margin-top: 5%;
+}
+
+.section5 .form-control{
+    width: 30%;
+    padding: 6px;
+}
+
+.section5 .btn{
+    border: none;
+    padding: 6px;
+}
+
+.section5 .social{
+    margin-top: 5%;
+    font-size: 30px;
+}
+
+.section5 h4{
+    font-family: 'Righteous';
+}
+
+.section5 .fb{
+    color: #4867AA;
+}
+
+.section5 .tw{
+    color: #1DA1F2;
+}
+
+.section5 .ins{
+    color: rgb(255, 103, 47);
+}
+
+.section5 .yt{
+    color: red;
+}
+
+@media only screen and(max-width: 768px){
+    .section1 .card{
+        width: 1rem;
+    }
+
+    .section4 img{
+        width: 361px;
+    }
+}
+
+@media only screen and(max-width: 320px){
+    .site-content .site-title{
+        font-size: 30px;
+        padding-left: 15%;
+    }
+
+    .section4 img{
+        width: 361px;
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello, Welcome to JS</h1>
+    <h2 class="val" id="val1"></h2>
+    <form action="">
+        <input type="number" name="variable" id="var1" class="variable" >
+        <input type="number" name="variable" id="var2" class="variable" >
+        <!-- <button onclick="sum()">Calculate</button> -->
+        <input type="button" onclick="sum()" name="button" id="btn" value="Calculate">
+    </form>
+
+    <script>
+        function sum(){
+            document.getElementById('val1').innerText = Number(document.getElementById('var1').value) + Number(document.getElementById('var2').value);
+        }
+    </script>
+</body>
+</html>

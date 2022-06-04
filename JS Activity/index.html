@@ -18,7 +18,17 @@
 
     <script>
         function sum(){
-            document.getElementById('val1').innerText = Number(document.getElementById('var1').value) + Number(document.getElementById('var2').value);
+            var a = Number(document.getElementById('var1').value);
+            var b = Number(document.getElementById('var2').value);
+            // var a = Number(prompt('Enter first Number'));
+            // var b = Number(prompt('Enter Second Number'));
+            var c = a+b;
+            var str = a+" + "+b+" = "+c;
+            alert('Printing Sum');
+            if(confirm('Do you want to print the sum?'))
+                document.getElementById('val1').innerText = str ;
+            else
+            document.getElementById('val1').innerText = 'You told me not to print the sum';
         }
     </script>
 </body>

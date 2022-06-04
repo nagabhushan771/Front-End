@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA Activity 2</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="var1">
+        <select name="Operation" id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="var2">
+        <input type="button" value="=" onclick="compute()">
+    </form>
+    <h2 id="result"></h2>
+    <button id="btn2" onclick="changeText()">Change Style</button>
+    <p class="para">Hello</p>
+    <p class="para">This</p>
+    <p class="para">Is</p>
+    <p class="para">Nagabhushan</p>
+
+    <script>
+        function compute(){
+            var a = Number(document.getElementById('var1').value);
+            var b = Number(document.getElementById('var2').value);
+            var op = document.getElementById('op').value;
+            var hElement = document.getElementById('result');
+            if(op === "+"){
+                hElement.innerText = a+b;
+            } else if(op === "-"){
+                hElement.innerText = a-b;
+            } else if(op === "*"){
+                hElement.innerText = a*b;
+            } else if(op === "/"){
+                if(b == 0){
+                    b = prompt('Please enter th number otherthan zero:');
+                }
+                hElement.innerText = a/b;
+            }
+        }
+
+        function changeText(){
+            var b = document.getElementsByClassName('para');
+            b[0].innerText = "Heyy";
+            b[1].innerText = "Sorry";
+            b[2].innerText = "He is";
+            b[3].innerText = "Busy";
+
+            for(var i = 0; i<b.length; i++){
+                b[i].style.cssText = 'font-size: 30px; margin: 0; transition: 2s;';
+            }
+
+
+        }
+    </script>
+</body>
+</html>

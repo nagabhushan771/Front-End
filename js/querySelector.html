@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <!-- <h3 class="para" id="para1">Para1</h3>
+    <h3 class="para" id="para2">Para1</h3>
+    <h3 class="para" id="para3">Para1</h3>
+    <h3 class="para" id="para4">Para1</h3> -->
+
+    <p>Input the number between 5 and 10</p>
+    <input id="numb">
+    <button type="button" onclick="checkInput()">Submit</button>
+    <p class="demo" id="demo"></p>
+    <script>
+        // var allQuery = document.querySelectorAll('.para');
+        // allQuery.forEach((para) => {
+        //     para.style.background = 'yellow';
+        // });
+        // var oneQuerySelectorById = document.querySelector('#para2');
+        // oneQuerySelectorById.style.color = 'brown';
+
+        // oneQuerySelectorByClass =  document.querySelector('.para');
+        // oneQuerySelectorByClass.innerText = 'changed para';
+
+        // var elementsByTag = document.getElementsByTagName("h3");
+        // console.log(elementsByTag);
+        // // elementsByTag.forEach((element) => {
+        // //     element.innerHTML = '<i>Emphacised</i>';
+        // // })
+        // elementsByTag[2].innerHTML = '<i>emphasized</i>';
+        var checkInput = function(){
+            var x = document.getElementById('numb').value;
+            // var text;
+            // if(x<1 || x > 10 || isNaN(x))
+            //     text = 'Invalid Input';
+            // else 
+            //     text = "Valid Input";
+            // document.getElementById('demo').innerHTML = text;
+            document.getElementById('demo').innerHTML = "";
+            try{
+                if(x == "") throw "empty";
+                if(isNaN(x)) throw "not a number";
+                x = Number(x);
+                if(x < 5) throw "too low";
+                if(x > 10) throw "too high"
+            }
+            catch(err){
+                document.getElementById('demo').innerHTML = "Input is "+err;
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    ------------------ HTML ------------------
+    create the main container with the grid.
+    top row of colspan 4 and below in each grid part we will add buttons
+    in the top part we will be putting ans empty string in it
+
+    --------------- CSS ----------------
+    add the hover effect
+
+    --------------- JS ------------------
+    addevent listener to every button with a click event
+    if clicked button's value is: 
+        C we will initilize the string to empty
+        <- then we will remove the last character of the string in the text field if it exixts
+        otherwise we will be concatinating the value of the clicked button to the string in the text space
+        if = is clicked we will change the content of the text space to the eval(current-string)
+ -->

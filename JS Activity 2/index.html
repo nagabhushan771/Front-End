@@ -31,18 +31,21 @@
             var b = Number(document.getElementById('var2').value);
             var op = document.getElementById('op').value;
             var hElement = document.getElementById('result');
-            if(op === "+"){
-                hElement.innerText = a+b;
-            } else if(op === "-"){
-                hElement.innerText = a-b;
-            } else if(op === "*"){
-                hElement.innerText = a*b;
-            } else if(op === "/"){
-                if(b == 0){
-                    b = prompt('Please enter th number otherthan zero:');
-                }
-                hElement.innerText = a/b;
-            }
+
+            var exp = document.getElementById('var1').value + document.getElementById('op').value + document.getElementById('var2').value;
+            hElement.innerText = Math.floor(eval(exp));
+            // if(op === "+"){
+            //     hElement.innerText = a+b;
+            // } else if(op === "-"){
+            //     hElement.innerText = a-b;
+            // } else if(op === "*"){
+            //     hElement.innerText = a*b;
+            // } else if(op === "/"){
+            //     if(b == 0){
+            //         b = prompt('Please enter th number otherthan zero:');
+            //     }
+            //     hElement.innerText = a/b;
+            // }
         }
 
         function changeText(){

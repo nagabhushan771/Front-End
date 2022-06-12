@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active menu</title>
+    <style>
+        .btn{
+            padding: 10px 16px;
+            font-size: 30px;
+            background-color: #ccc;
+            color: black;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        .active, .btn:hover{
+            background-color: #666;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Active buttons</h1>
+    <button class="btn active">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+
+    <script>
+        const btns = document.querySelectorAll('.btn');
+        console.log(btns);
+        btns.forEach((element) => {
+            element.addEventListener('click', () => {
+                // document.getElementsByClassName('active')[0].classList.remove('active');
+                console.log(element);
+                var cur = document.querySelector('.active');
+                // cur[0].className = cur[0].className.replace(' active', '');
+                cur.classList.toggle('active');
+                // this.className += ' active';
+                element.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

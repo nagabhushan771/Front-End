@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionEventListener</title>
+</head>
+<body>
+    <h1 id="greet"></h1>
+    <h1>Event Listener</h1>
+    <h2>.addEventListener()</h2>
+    <p>click on the screen to add text</p>
+    <p id="para"></p>
+
+    <script>
+        document.addEventListener("click", () => {
+            document.getElementById("para").innerHTML += "First Function executed ";
+        });
+        document.addEventListener("click", () => {
+            document.getElementById("para").innerHTML += "Second Function executed ";
+        });
+
+        var time = new Date().getHours();
+        var greeting;
+        if(time < 12){
+            greeting = "Good Morning";
+        } else if(time < 16){
+            greeting = "Good noon";
+        } else {
+            greeting = "Good Evening..."
+        }
+        document.getElementById('greet').innerHTML = greeting;
+    </script>
+</body>
+</html>

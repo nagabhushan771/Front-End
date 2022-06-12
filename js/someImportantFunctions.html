@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* .fa{
+            font-size: 50px;
+            cursor: pointer;
+            user-select: none;
+            transition: 1s;
+        }
+        .fa:hover{
+            color: darkblue;
+        } */
+        /* .hide{
+            display: none;
+        }
+        #myDiv{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 50px 0;
+            margin-top: 20px;
+            height: 0;
+            text-align: center;
+            background-color: lightblue;
+            transition: 1s;
+        } */
+        body{
+            background-color: white;
+            color: black;
+            padding: 25px;
+            font-size: 40px;
+        }
+
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="myFunction()">Try to toggle</button>
+    <div id="myDiv">This is my Div</div> -->
+    <!-- <i class="fa fa-thumbs-up" onclick="invert(this)"></i> -->
+    <h1>Toggle Dark and Light mode</h1>
+    <p>click te button to toggle the dark and light modes</p>
+    <button onclick="myFunction()">Toggle dark mode</button>
+    <script>
+    //     var invert = (x) => {
+    //         x.classList.toggle('fa-thumbs-down');
+    //     }
+    // function myFunction(){
+    //     // document.getElementById('myDiv').classList.toggle('hide');
+    //     var x = document.getElementById('myDiv');
+    //     if(x.style.display == 'none'){
+    //         x.style.display = 'block';
+    //     } else {
+    //         x.style.display = 'none'
+    //     }
+    // }
+
+    function myFunction(){
+        document.body.classList.toggle('dark-mode');
+    }
+
+    </script>
+</body>
+</html>

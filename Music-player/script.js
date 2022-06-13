@@ -182,3 +182,11 @@ document.getElementById('previous').addEventListener('click', () => {
     masterPlay.classList.add('fa-circle-pause');
 })
 
+//If the currently playing audio ends we need to play the next song in the sequence
+audioElement.onended = () => {
+    songItemPlays[songIndex].classList.remove('fa-circle-pause');
+    songItemPlays[songIndex].classList.add('fa-circle-play')
+    songIndex = (songIndex+1)%10;
+    
+    playThisSong(songIndex, songItemPlays[songIndex]);
+}

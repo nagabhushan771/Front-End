@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(90deg,#7d5fff,#7158e2);
+            font-family: 'Roboto' sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search{
+            position: relative;
+            height: 50px;
+        }
+
+        .search .input{
+            background-color: #fff;
+            border: none;
+            font-size: 18px;
+            padding: 15px;
+            height: 50px;
+            width: 50px;
+            transition: width 0.3s ease;
+            margin: 0;
+            border-radius: 10px;
+        }
+
+        .search .btn{
+            border: none;
+            outline: none;
+            background-color: #fff;
+            font-size: 18px;
+            /* margin-left: -4px; */
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .btn:focus, input:focus{
+            outline: none;
+        }
+
+        .search.active .input{
+            width: 250px;
+        }
+
+        .search.active .btn{
+            transform: translateX(200px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" class="input" placeholder="Search...">
+        <button class="btn" onclick="expand()"><i class="fas fa-search"></i></button>
+    </div> 
+    <script>
+        function expand(){
+            document.querySelector('.search').classList.toggle('active');
+            document.querySelector('.input').focus();
+        }
+    </script>
+</body>
+</html>

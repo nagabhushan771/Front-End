@@ -92,8 +92,9 @@
 
 
 
-var a = [20, 58, 23, 89, 28, 12, 43, 38];
-console.log(a);
+var a = [20, 58, 23, 89, 28, 12, 43, 28, 28];
+console.log("Before sorting");
+console.log(a.toString());
 //bubble sort
 // for(var i = 0; i<a.length; i++){
 //     for(var j = 0; j<a.length-i-1; j++){
@@ -104,14 +105,91 @@ console.log(a);
 // }
 
 //insertion sort
-for(var i = 0; i<a.length-1; i++){
-    var cur = a[i+1];
-    var j;
-    for(j = i; j>=0 && a[j] > cur; j--){
-        a[j+1] = a[j];
-    }
-    a[j+1] = cur;
+// for(var i = 0; i<a.length-1; i++){
+//     var cur = a[i+1];
+//     var j;
+//     for(j = i; j>=0 && a[j] > cur; j--){
+//         a[j+1] = a[j];
+//     }
+//     a[j+1] = cur;
+// }
+
+//selection sort
+// for(var i = 0; i<a.length; i++){
+//     // var minEle = a[i];
+//     var minInd = i;
+//     // var j;
+//     for(var j = i+1; j < a.length; j++){
+//         if(a[minInd] > a[j])
+//             minInd = j;
+//     }
+//     [a[i], a[minInd]] = [a[minInd], a[i]];
+// }
+
+
+function mergeSort(a, left, right){
+    if(left >= right)
+        return;
+    let mid = left + Math.floor((right-left)/2);
+    // console.log(mid);
+    mergeSort(a, left, mid);
+    mergeSort(a, mid+1, right);
+    merge(a, left, mid, right);
 }
 
+function merge(a, left, mid, right){
+    let ind1 = left;
+    let ind2 = mid+1;
+    let finalInd = 0;
+    let n = Number(right-left);
+    // console.log(right + " " + left);
+    // console.log(right + " - " + left + " = " + n);
+    let merged = new Array(n);
+    while(ind1 <= mid && ind2 <= right){
+        if(a[ind1]<=a[ind2])
+            merged[finalInd++] = a[ind1++];
+        else
+            merged[finalInd++] = a[ind2++];
+    }
+    if(ind1 <= mid){
+        while(ind1 <= mid)
+            merged[finalInd++] = a[ind1++];
+    }
+    if(ind2 < right){
+        while(ind2 <= right)
+            merged[finalInd++] = a[ind2++];
+    }
+    // console.log(merged);
+    for(var i = 0; i<merged.length; i++){
+        a[left+i] = merged[i];
+    }
+    // return a;
+}
 
-console.log(a);
+function quickSort(a, left, right){
+    if(left >= right){
+        return;
+    }
+    let pivot = left;
+    let l = left+1;
+    let r = right;
+    while(l<=r){
+        while(l<=r && a[l] <= a[pivot])
+            l++;
+        while(l<=r && a[r] > a[pivot])
+            r--;
+        if(l<r){
+            [a[l], a[r]] = [a[r], a[l]];
+        }
+    }
+
+    [a[pivot], a[r]] = [a[r], a[pivot]];
+    quickSort(a, left, r-1);
+    quickSort(a, r+1, right);
+}
+
+console.log("After sorting");
+// console.log(a.length-1);
+// mergeSort(a, 0, a.length-1);
+quickSort(a, 0, a.length-1);
+console.log(a.toString());

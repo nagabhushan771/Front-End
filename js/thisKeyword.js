@@ -94,11 +94,50 @@ and it returns the object the difeined parameters in the constructor method
 // console.log(fullName);
 
 //setTimeout() => used to delay the execution of the mention method by the menioned amount of miliSeconds
-console.log("Hey");
-console.log("This");
-setTimeout(myName, 2000);
-console.log("is");
+// console.log("Hey");
+// console.log("This");
+// setTimeout(myName, 2000);
+// console.log("is");
 
-function myName(){
-    console.log("Nagabhushan");
-}
+// function myName(){
+//     console.log("Nagabhushan");
+// }
+
+// const date = new Date();
+// date.toLocaleTimeString();
+// console.log(date.toLocaleTimeString());
+
+// var textField =  document.getElementById('demo');
+
+// var myInterval = setInterval(updateTime, 1000);
+
+// function updateTime(){
+//     const date = new Date();
+//     textField.innerHTML = date.toLocaleTimeString();
+// }
+
+// function stopTime(){
+//     clearInterval(myInterval);
+// }
+
+
+// localStorage.setItem("name", "Arsh sharma"); // lifetime is forever for local Storage
+// localStorage.getItem("name");
+
+// sessionStorage.setItem(); // lifetime is of one session for these sessionStorage objects
+// sessionStorage.getItem();
+
+
+// '{"name" : "John", "age" : 30}'
+// JSON.parse(); // strings into js objects
+// JSON.stringify(); // objects into json text
+
+var txt = '{"name" : "John", "age" : 30, "city" : "San Francisco", "country" : "CA"}';
+
+var obj = JSON.parse(txt);
+
+console.log(obj);
+
+var convertedTxt = JSON.stringify(obj);
+
+console.log(convertedTxt);
